@@ -1,0 +1,5 @@
+/Users/erica/Desktop/Games/Cat-Crossing/.utmp/RelWithDebInfo/4g661w4m/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/erica/Desktop/Games/Cat-Crossing/.utmp/RelWithDebInfo/4g661w4m/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/erica/Desktop/Games/Cat-Crossing/.utmp/RelWithDebInfo/4g661w4m/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Users/erica/Desktop/Games/Cat-Crossing/.utmp/RelWithDebInfo/4g661w4m/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/erica/Desktop/Games/Cat-Crossing/.utmp/RelWithDebInfo/4g661w4m/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

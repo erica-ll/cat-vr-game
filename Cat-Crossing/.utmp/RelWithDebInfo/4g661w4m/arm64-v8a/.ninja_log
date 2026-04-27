@@ -1,0 +1,10 @@
+# ninja log v5
+1	895	1777240273910668861	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	be93c3a6d498bf88
+0	899	1777240273919971940	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	9240b98fe85dc5eb
+1	923	1777240273944797124	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	81b9a0e38e8adbdc
+1	936	1777240273953964953	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2ee422d0e8c2a6de
+0	1026	1777240274048358168	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	99953b2f4c3d1038
+2	1046	1777240274066528075	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	8e8a7884044745f0
+1	1103	1777240274125628980	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	65f1c8d3b3a5520c
+0	1186	1777240274209294069	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	9e52a176149dd732
+1187	1274	1777240274299597892	/Users/erica/Desktop/Games/Cat-Crossing/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4g661w4m/obj/arm64-v8a/libgame.so	806a0c06c5fc8ffc

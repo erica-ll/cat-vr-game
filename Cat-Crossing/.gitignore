@@ -1,0 +1,84 @@
+ # =============================================================================                                       
+  # Unity .gitignore                                                                                                    
+  # Unity 6 + Meta XR SDK + Android (Quest) target                                                                      
+  # =============================================================================                                       
+                                                            
+  # ----- Unity generated (never commit, always regenerated) --------------------                                       
+  [Ll]ibrary/
+  [Tt]emp/                                                                                                              
+  [Oo]bj/                                                   
+  [Ll]ogs/
+  [Mm]emoryCaptures/
+  [Rr]ecordings/
+                                                                                                                        
+  # ----- Build output ----------------------------------------------------------
+  [Bb]uild/                                                                                                             
+  [Bb]uilds/                                                
+  *.apk
+  *.aab
+  *.unitypackage
+  *.app
+
+  # ----- Android Gradle (generated during build) --------------------------------                                      
+  /[Ee]xported[Aa]pps/
+  gradle-wrapper.jar                                                                                                    
+                                                            
+  # ----- Unity user-local settings (per-machine, not shared) -------------------
+  [Uu]ser[Ss]ettings/
+                                                                                                                        
+  # ----- IDE / editor ----------------------------------------------------------
+  .vs/                                                                                                                  
+  .idea/                                                    
+  *.suo
+  *.user
+  *.userprefs
+  *.pidb
+  *.booproj
+  *.svd
+  *.pdb
+  *.mdb
+
+  # ----- Generated C# project files (Unity recreates these) --------------------                                       
+  *.csproj
+  *.sln                                                                                                                 
+                                                            
+  # ----- OS cruft --------------------------------------------------------------
+  .DS_Store
+  .DS_Store?
+  ._*
+  Thumbs.db
+  Desktop.ini
+                                                                                                                        
+  # ----- Crashlytics -----------------------------------------------------------
+  crashlytics-build.properties                                                                                          
+                                                            
+  # ----- Asset Store / third-party turds that sometimes leak in ----------------
+  [Aa]ssets/AssetStoreTools*
+
+  # =============================================================================                                       
+  # Large binary / model files — use Git LFS or keep out of the repo
+  # =============================================================================                                       
+  # Whisper speech-to-text model weights (ggml-*.bin can be 150 MB – 1.5 GB).
+  # Option A: exclude entirely and document where to download them in README.                                           
+  # Option B: track with Git LFS — run: git lfs track "*.bin"
+  # Uncomment the line below to exclude them from the repo:                                                             
+  [Aa]ssets/[Ss]treaming[Aa]ssets/Whisper/*.bin           
+                                                                                                                        
+  # Audio recordings / large media
+  *.wav                                                                                                                 
+  *.mp3                                                     
+  *.ogg
+  *.aiff
+
+  # Video
+  *.mp4
+  *.mov
+  *.avi
+                                                                                                                        
+  # =============================================================================
+  # What IS committed (explicit whitelist reminders — not gitignore syntax)                                             
+  # =============================================================================
+  # Assets/          — all scripts, scenes, prefabs, art, settings
+  # Packages/        — manifest.json + packages-lock.json (package versions)
+  # ProjectSettings/ — all project-wide settings (build target, XR, quality…)                                           
+  # =================================================
