@@ -8,6 +8,7 @@ using System.Collections;
 using UnityEngine.Android;
 #endif
 
+[RequireComponent(typeof(AudioSource))]
 public class VoiceInputManager : MonoBehaviour
 {
     [Header("Whisper")]
@@ -32,6 +33,8 @@ public class VoiceInputManager : MonoBehaviour
     public UnityEvent<string> onTranscriptionComplete;
     public UnityEvent onRecordingStarted;
     public UnityEvent onRecordingEnded;
+    public UnityEvent onFistDetected;
+    public UnityEvent onFistReleased;
 
     private bool _isRecording;
     private string _micDevice;
@@ -57,7 +60,10 @@ public class VoiceInputManager : MonoBehaviour
 #endif
         Debug.Log($"[VoiceInputManager] Available microphones: {string.Join(", ", Microphone.devices)}");
 
-        _audioSource = gameObject.AddComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
+        // Ensure 2D playback on Quest — Oculus Spatializer can interfere otherwise
+        _audioSource.spatialBlend = 0f;
+        _audioSource.bypassEffects = true;
 
         if (Microphone.devices.Length > 0)
             _micDevice = Microphone.devices[0];
@@ -101,6 +107,7 @@ public class VoiceInputManager : MonoBehaviour
             // Fist just started
             _gestureRaw = true;
             _gestureHoldStart = now;
+            onFistDetected?.Invoke();
         }
         else if (!detected && _gestureRaw)
         {
@@ -110,6 +117,10 @@ public class VoiceInputManager : MonoBehaviour
             {
                 _gestureConfirmed = false;
                 StopRecordingAndTranscribe();
+            }
+            else
+            {
+                onFistReleased?.Invoke();
             }
         }
 
